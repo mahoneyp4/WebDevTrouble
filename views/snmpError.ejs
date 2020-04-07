@@ -1,0 +1,51 @@
+<html>
+<head>
+<script type = "text/javascript" src="/js/clientSnmp.js"></script>
+<link rel="stylesheet" type="text/css" href="/stylesheets/snmpstylesheet.css">
+	<div class="header">
+  <div class="header-left">
+    <a input type="button" onclick="window.location.href = 'index.html';" href="#home">Home</a>
+    <a input type="button" onclick="window.location.href = 'nmap.html';" href="#nmap">NMAP</a>
+    <a input type="button" onclick="window.location.href = 'snmp.html';" href="#snmp">SNMP</a>
+  </div>
+  </div>
+  
+  <body>
+    <form action="/snmp/" method="POST" id="mainForm">
+        <p>An error has occured, please try again.</p>
+        
+        <label for="ip">IP Address</label>
+      <input type="text" name="ip" id="ip">
+
+      <label for="oid">OID</label>
+      <input type="text" name="oid" id="oid">
+      <br/>
+      <input type="checkbox" name="default" id="default" class="box">
+      <label for="default">Default Settings</label><br/>
+
+	  <input type="checkbox" name="host" class="non-default box" id="host">
+      <label for="host">Host Name</label><br/>
+
+	  <input type="checkbox" name="disk" class="non-default box" id="disk">
+      <label for="disk">Disk Space</label><br/>
+
+	  <input type="checkbox" name="memory" class="non-default box" id="memory">
+      <label for="memory">Memory</label><br/>
+
+	  <input type="checkbox" name="cpu" class="non-default box" id="cpu">
+      <label for="cpu">CPU</label><br/>
+
+      <input type="checkbox" name="network" class="non-default box" id="network">
+      <label for="network">Network Throughput</label><br/>
+
+	  
+
+      <br/>
+      <input type="submit" value="Submit" id='submitButton'>
+	  
+	  <output name="output" id="output"/>
+	  <div class = "output"></div>
+    </form>
+    
+  </body>
+</html>
