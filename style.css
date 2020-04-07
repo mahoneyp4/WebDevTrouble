@@ -1,0 +1,60 @@
+ul {
+    list-style-type: none;
+    margin: 1px;
+    padding: 1px;
+    overflow: hidden;
+    background-color: grey;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: left;
+    padding: 15px 17px;
+    text-decoration: none;
+}
+
+li a:active {
+    background-color: grey;
+}
+
+li a:hover {
+    background-color: lightblue;
+}
+
+h2 {
+   padding: 1px;
+}
+
+.network {
+  background-color: lightblue;
+  width: auto;
+  border: 15px solid grey;
+  padding: 70px;
+  margin: 20px; 
+  text-align: center;
+}
+
+.disk {
+  background-color: lightblue;
+  width: auto;
+  border: 15px solid grey;
+  padding: 70px;
+  margin: 20px;
+  text-align: center;
+
+}
+
+.processor {
+  background-color: lightblue;
+  width: auto;
+  border: 15px solid grey;
+  padding: 70px;
+  margin: 20px;
+  text-align: center;
+}
+ 

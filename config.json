@@ -1,0 +1,1 @@
+{"dev":{"config_id":"development","app_name":"my app","app_desc":"my app desc","node_port":8080,"json_indentation":4,"network_ip":"192.168.1.1","subnet":"28"},"apiNmap":{"ip":"192.168.1.1","subnet":"24","customSearch":"-p 1-65535 -sV -sS -T4 target"},"apiSnmp":{"ip":"192.168.1.1","custom":""}}

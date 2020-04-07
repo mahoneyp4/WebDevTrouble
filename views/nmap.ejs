@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/stylesheets/stylesheet.css">
+    <div class="header">
+        <div class="header-left">
+            <a input type="button" class = "btn active" onclick="window.location.href = '/';" href="#home">Home</a>
+            <a input type="button" class = "btn" onclick="window.location.href = '/nmap';" href="#nmap">NMAP</a>
+            <a input type="button" class = "btn" onclick="window.location.href = '/snmp';" href="#snmp">SNMP</a>
+        </div>
+    </div>
+</head>
+
+<script type="text/javascript">
+    function EnableDisableTextBox() {
+        var custom = document.getElementById("custom");
+        var customScan = document.getElementById("customScan");
+        customScan.disabled = custom.checked ? false : true;
+        if (!customScan.disabled) {
+            customScan.focus();
+        }
+    }
+</script>
+
+<body>
+<form action="/nmap/" method="POST">
+    <h3>Target IP:</h3>
+    <input type="text" id="ipAddr" name="ipAddr">
+    <div>
+        <h3>Options</h3>
+        <input type="radio" id="quickScan" name="scan" value="QuickScan" onclick="EnableDisableTextBox()" />
+        <label for="quickscan">Quick Scan</label><br>
+        <input type="radio" id="osportscan" name="scan" value="OSPortScan" onclick="EnableDisableTextBox()" />
+        <label for="osportscan">OS and Port Scan</label><br>
+        <input type="radio" id="intense" name="scan" value="IntenseScan" onclick="EnableDisableTextBox()" />
+        <label for="single">Intense Scan</label><br>
+            <input type="radio" id="custom" name="scan" value="CustomScan" onclick="EnableDisableTextBox()" />
+            <label for="custom">Custom Scan</label> <input type="text" id="customScan"  name="customScan" disabled="disabled" />
+            <br>
+        <div>
+            <br>
+            <input type="submit" value="Submit"/>
+            <input type="submit" value="Export"/>
+        </div>
+    </div>
+</form>
+<br>
+<output name="output" id="output"/>
+<div class="output" id="outputTest">Output
+    <p id="jsonTest"></p>
+    <pre id="json"></pre>
+</div>
+
+</form>
+</body>
+
+<script type="text/javascript">
+    var test = <%-JSON.stringify(data)%>;
+    var locationP = document.getElementById("jsonTest");
+    locationP.innerHTML = JSON.stringify(test, undefined, "");
+</script>
+
+</html>
