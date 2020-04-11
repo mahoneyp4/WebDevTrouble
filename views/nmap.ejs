@@ -23,6 +23,7 @@
 </script>
 
 <body>
+<p color="red"><%-errorResp%></p>
 <form action="/nmap/" method="POST">
     <h3>Target IP:</h3>
     <input type="text" id="ipAddr" name="ipAddr">
@@ -40,7 +41,7 @@
         <div>
             <br>
             <input type="submit" value="Submit"/>
-            <input type="submit" value="Export"/>
+            <input type="submit" id="exportResult" name="exportResult" value="Export"/>
         </div>
     </div>
 </form>
